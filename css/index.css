@@ -1,0 +1,168 @@
+@import url(/assets/css/pilcrow-rounded.css);
+@import url(/assets/css/tanker.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+* {
+    --background: #ffeacf;
+    --primary: #f43a45;
+    --accent: #f6aa54;
+    --font-size: 16px;
+    --padding: 10px;
+    --nav-height: 130px;
+}
+
+
+body {
+    font-size: var(--font-size);
+    color: var(--primary-color);
+    padding: var(--padding);
+    font-family: 'PilcrowRounded-Variable';
+    background-color: var(--background);
+    padding: 0;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--padding);
+    border: none;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 100%;
+    height: var(--nav-height);
+    background-color: var(--accent);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 0 50px 50px;
+}
+
+.logo {
+    position: absolute;
+    left: 100px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 100px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.shadow {
+    border-radius: 30px;
+    box-shadow: 0 70px 8px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 50px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - var(--nav-height));
+}
+
+.title {
+    font-size: 100px;
+    font-family: 'Tanker-Regular';
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.explore {
+    background-color: white;
+    width: 300px;
+    height: 75px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.explore:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.explore:hover p {
+    color: white;
+}
+
+.explore img {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+
+.explore p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+    /* margin-right: 20px; */
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+    rotate: -20deg;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+
+.about {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary);
+}
