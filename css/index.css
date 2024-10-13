@@ -20,7 +20,6 @@
 body {
     font-size: var(--font-size);
     color: var(--primary-color);
-    padding: var(--padding);
     font-family: 'PilcrowRounded-Variable';
     background-color: var(--background);
     padding: 0;
@@ -70,7 +69,6 @@ button {
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
-    text-decoration: none;
     transition: 0.2s;
 }
 
@@ -91,6 +89,15 @@ button {
     justify-content: space-around;
     align-items: center;
     height: calc(100vh - var(--nav-height));
+}
+
+.bottles{
+	display: flex;
+	gap: 1px;
+}
+
+.bottles img {
+	width: 400px;
 }
 
 .title {
@@ -129,7 +136,6 @@ button {
 
 .explore p {
     font-size: 25px;
-    font-weight: bold;
     margin-left: 20px;
     /* margin-right: 20px; */
     font-weight: 900;
@@ -165,4 +171,40 @@ button {
     height: 100vh;
     width: 100%;
     background-color: var(--primary);
+}
+
+.about .texture{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    vertical-align: top;
+    left: 0px;
+    z-index: 0;
+}
+
+.about .content{
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.about .title{
+    color: var(--accent)
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 40px;
+}
+.text p {
+    font-size: 30px;
+    color: white;
+    width: 50%;
 }
