@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="navbar">
         <div class="logo">
@@ -13,18 +15,20 @@
         </div>
         <nav class="nav-links">
             <a href="#">HOME</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">PRODUCTS</a>
-            <a href="#">RECIPE</a>
-            <a href="#">CONTACT</a>
+            <a href="#About">ABOUT US</a>
+            <a href="#Product">PRODUCTS</a>
+            <a href="#Recipe">RECIPE</a>
+            <a href="#Contact">CONTACT</a>
         </nav>
     </div>
     <div class="hero">
-            <img src="assets/cups.png" class="floating bottle" width="600px" alt="bottle">
- 
+        <img src="assets/cups.png" class="floating bottle" width="600px" alt="bottle">
+
         <div>
             <h1 class="title">INSTANT NOODLES,<br>INFINITE FLAVOR!</h1>
-            <div class="explore"> <p> EXPLORE FLAVOURS </p> <img src="assets/arrow-up-right.svg" alt="logo"></div>
+            <div class="explore">
+                <p> EXPLORE FLAVOURS </p> <img src="assets/arrow-up-right.svg" alt="logo">
+            </div>
         </div>
     </div>
     <div id="About" class="about">
@@ -34,15 +38,114 @@
             <div>
                 <h1 class="title">About Zoopy</h1>
                 <div class="text">
-                        <div>
-                            <p class="left" style="text-align: right;" >Welcome to Zoopy, where we are passionate about bringing you delicious, convenient, and flavorful instant cup noodles. As a forward-thinking startup, we are dedicated to revolutionizing quick meals by offering a wide variety of taste experiences that cater to every palate. </p>
-                        </div>
-                    
-                        <p>At Zoopy, we prioritize quality ingredients and innovative flavors, ensuring each cup is packed with satisfying goodness. Whether you're on the go or just need a fast, tasty meal, Zoopy is here to fuel your moments with warmth and flavor. Join us as we redefine the way you enjoy noodles!</p>
-                    
+                    <div>
+                        <p class="left" style="text-align: right;">Welcome to Zoopy, where we are passionate about
+                            bringing you delicious, convenient, and flavorful instant cup noodles. As a forward-thinking
+                            startup, we are dedicated to revolutionizing quick meals by offering a wide variety of taste
+                            experiences that cater to every palate. </p>
+                    </div>
+
+                    <p>At Zoopy, we prioritize quality ingredients and innovative flavors, ensuring each cup is packed
+                        with satisfying goodness. Whether you're on the go or just need a fast, tasty meal, Zoopy is
+                        here to fuel your moments with warmth and flavor. Join us as we redefine the way you enjoy
+                        noodles!</p>
+
                 </div>
             </div>
         </div>
     </div>
+    <div id="Product" class="products">
+        <div class="texture"></div>
+        <div class="content">
+            <div class="title">
+                PRODUCTS
+            </div>
+            <div class="gallery">
+                <div class="img-box"></div>
+                <div class="img-box"></div>
+                <div class="img-box"></div>
+            </div>
+        </div>
+    </div>
+    <div id="Recipe" class="recipe">
+        <h1 class="title">
+            Recipe
+        </h1>
+        <div class="carousel">
+            <div class="item">
+                <div class="text">
+                    <h1>Spicy Veggie Stir Fry</h1>
+                    <p>Spicy Veggie Stir-fry noodles is the best recipes for late night movie sessions</p>
+                    <h2>8-10 mins</h2>
+                </div>
+                <img src="assets/recipe1.png" alt="recipe1">
+            </div>
+            <div class="item">
+                <div class="text">
+                    <h1>Ramen Egg Noodles</h1>
+                    <p>Ramen Egg Noodles are perfect for a quick and satisfying meal, packed with flavor and protein.</p>
+                    <h2>5-7 mins</h2>
+                </div>
+                <img src="assets/recipe2.png" alt="recipe2">
+            </div>
+            <div class="item">
+                <div class="text">
+                    <h1>Garlic Butter Shrimp Noodles</h1>
+                    <p>Garlic Butter Shrimp Noodles are a delicious and easy-to-make dish, perfect for seafood lovers.</p>
+                    <h2>10-12 mins</h2>
+                </div>
+                <img src="assets/recipe3.png" alt="recipe3">
+            </div>
+        </div>
+
+    </div>
+        
+    <div id="Contact" class="footer">
+        <img src="assets/footerlogo.png" alt="">
+        <p class="trademark">&#169; Zoopy, All rights reserved  2024</p>
+        <div class="contact">
+            <h1>CONTACT US</h1>
+            <p>Zoopy@email.com</p>
+            <p>123-456-7890</p>
+        </div>
+        <div>
+            <h1>Quick Links</h1>
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#About">About Us</a>
+                <a href="#Product">Products</a>
+                <a href="#Recipe">Recipe</a>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            let currentIndex = 0;
+            const items = document.querySelectorAll('.carousel .item');
+            const totalItems = items.length;
+
+            function showItem(index) {
+                items.forEach((item, i) => {
+                    item.style.display = i === index ? 'flex' : 'none';
+                });
+            }
+
+            function nextItem() {
+                currentIndex = (currentIndex + 1) % totalItems;
+                showItem(currentIndex);
+            }
+
+            function prevItem() {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                showItem(currentIndex);
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                showItem(currentIndex);
+                setInterval(nextItem, 2000); // Change item every 3 seconds
+            });
+        </script>
+    </div>
 </body>
+
 </html>
